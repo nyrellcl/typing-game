@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.js": "/typing-game/static/js/main.53d6f117.js",
+    "static/js/787.59e57e67.chunk.js": "/typing-game/static/js/787.59e57e67.chunk.js",
+    "index.html": "/typing-game/index.html",
+    "main.53d6f117.js.map": "/typing-game/static/js/main.53d6f117.js.map",
+    "787.59e57e67.chunk.js.map": "/typing-game/static/js/787.59e57e67.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.53d6f117.js"
+  ]
+}
