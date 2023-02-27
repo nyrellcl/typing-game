@@ -1,0 +1,41 @@
+@import "../Global-sass/function";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-width: rem(375);
+}
+
+.typing-section {
+    position: relative;
+    h1{
+        position: absolute;
+        text-align: center;
+        top: 20%;
+        right: 0;
+        left: 0;
+    }
+  &__area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+    gap: 5rem;
+    &__quote {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+      flex-wrap: wrap;
+    }
+    .user-area {
+      display: flex;
+      gap: 1rem;
+      border: none;
+    }
+  }
+}

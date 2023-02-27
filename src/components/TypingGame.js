@@ -1,22 +1,73 @@
-import React from 'react'
-import { useState } from 'react';
+import React from "react";
+import { useState } from "react";
 
 function TypingGame() {
-    const [quotes, setQuotes] = useState([
-        "When you have eliminated the impossible, whatever remains, however improbable, must be the truth.",
-        "There is nothing more deceptive than an obvious fact.",
-        "I ought to know by this time that when a fact appears to be opposed to a long train of deductions it invariably proves to be capable of bearing some other interpretation.",
-        "I never make exceptions. An exception disproves the rule.",
-        "What one man can invent another can discover.",
-        "Nothing clears up a case so much as stating it to another person.",
-        "Education never ends, Watson. It is a series of lessons, with the greatest for the last.",
-      ]);
-    
-      const [words, setWords] = useState([]);
-      const [startTime, setStartTime] = useState(Date.now())
+  const [quotes] = useState([
+    "When you have eliminated the impossible, whatever remains, however improbable, must be the truth.",
+    "There is nothing more deceptive than an obvious fact.",
+    "I ought to know by this time that when a fact appears to be opposed to a long train of deductions it invariably proves to be capable of bearing some other interpretation.",
+    "I never make exceptions. An exception disproves the rule.",
+    "What one man can invent another can discover.",
+    "Nothing clears up a case so much as stating it to another person.",
+    "Education never ends, Watson. It is a series of lessons, with the greatest for the last.",
+  ]);
+
+  const [words, setWords] = useState([]);
+  const [typedQuote, setTypedQuote] = useState("");
+  const [setCurrentQuote] = useState("");
+  const [startTime, setStartTime] = useState(Date.now());
+  const [isWin, setIsWin] = useState(false);
+
+  function getQuote() {
+    const quoteIndex = Math.floor(Math.random() * quotes.length);
+    const quote = quotes[quoteIndex];
+    const quoteChars = quote.split("");
+    setWords(quoteChars);
+    setStartTime(Date.now() / 1000);
+    setIsWin(false);
+  }
+
+  const handleOnInput = (e) => {
+    const typedValue = e.target.value;
+    setTypedQuote(typedValue);
+    const currentQuote = words[0];
+    if (typedValue === currentQuote) {
+      setCurrentQuote(currentQuote);
+      //deletes the characters of each word in quote
+      setWords(words.slice(1));
+      setTypedQuote("");
+      if (words.length === 1) {
+        setIsWin(true);
+      }
+    }
+    if (typedValue !== currentQuote) {
+      console.log("oops wrong letter");
+    }
+  };
+
   return (
-    <div>TypingGame</div>
-  )
+    <section className="typing-section">
+      <h1>Practice your typing</h1>
+      <article className="typing-section__area">
+        <p>{startTime}</p>
+        <div className="typing-section__area__quote">
+          {isWin ? <p>Nice Job! Lets keep Practicing!</p> : <p>{words}</p>}
+        </div>
+        <fieldset className="user-area">
+          <input
+            onChange={handleOnInput}
+            type="text"
+            value={typedQuote}
+            aria-label="current word"
+            id="typed-value"
+          />
+          <button type="button" onClick={getQuote}>
+            Generate quote
+          </button>
+        </fieldset>
+      </article>
+    </section>
+  );
 }
 
-export default TypingGame
+export default TypingGame;
