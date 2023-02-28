@@ -27,34 +27,61 @@ body {
     font-family: "Bitter";
     color: #f8f9d7;
   }
+  .keys {
+    display: flex;
+    align-items: center;
+    &__individual {
+      line-height: rem(80);
+      font-size: rem(22);
+      text-align: center;
+      width: rem(80);
+      color: #555;
+      cursor: pointer;
+      margin: 0 8px;
+      height: rem(80);
+      border: rem(1) solid #f2f2f2;
+      text-shadow: 0 rem(0.5) rem(1) #777, 0 rem(2) rem(6) #f2f2f2;
+      border-radius: rem(10);
+      box-shadow: 0 0 1px #888, 0 1px 0 #fff, 0 6px 0 #c0c0c0,
+        0 8px 17px rgba(#444, 0.4), 2px 1px 4px rgba(#444, 0.25),
+        -2px 1px 4px rgba(#444, 0.25), 0 9px 16px rgba(#444, 0.1);
+      transition: box-shadow 0.3s ease, transform 0.15s ease;
+      &:first-child{
+          animation: auto-type 3s infinite 0.25s;
+      }
+      &:nth-child(2){
+          animation: auto-type 3s infinite 0.75s;
+      }
+      &:nth-child(3){
+          animation: auto-type 3s infinite 1s;
+      }
+      &:nth-child(4){
+          animation: auto-type 3s infinite 1.25s;
+      }
+    }
+  }
   &__content {
     width: 90%;
     margin: 0 auto;
     font-size: rem(24);
     text-align: center;
-    p{
-        line-height: 2.5rem;
+    p {
+      line-height: 2.5rem;
     }
-    .start-btn{
-        background-color: #6E85B7;
-        border: none;
-        width: rem(120);
-        height: rem(40);
-        border-radius: rem(8);
-        margin-top: 2rem;
-        text-transform: uppercase;
-        color: #f8f9d7;
-        font-weight: 700;
-        letter-spacing: rem(1);
-        box-shadow: 0 rem(8) rem(15) rgba(0,0,0,0.1);
-        cursor: pointer;
-        transition: all 0.3s ease 0s;
-        &:hover{
-            background-color:#f8f9d7;
-            color: #6E85B7;
-            box-shadow: 0 rem(15) rem(20) rgba(46,229,157,0.4);
-            transform: translateY(rem(-7));
-        }
+    .start-btn {
+      background-color: #6e85b7;
+      border: none;
+      width: rem(120);
+      height: rem(40);
+      border-radius: rem(8);
+      margin-top: 2rem;
+      text-transform: uppercase;
+      color: #f8f9d7;
+      font-weight: 700;
+      letter-spacing: rem(1);
+      box-shadow: 0 rem(8) rem(15) rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      transition: all 0.3s ease 0s;
     }
   }
 }
@@ -86,5 +113,29 @@ body {
       gap: 1rem;
       border: none;
     }
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .start-section {
+    &__content {
+      .start-btn {
+        &:hover {
+          background-color: #f8f9d7;
+          color: #6e85b7;
+          box-shadow: 0 rem(15) rem(20) rgba(46, 229, 157, 0.4);
+          transform: translateY(rem(-7));
+        }
+      }
+    }
+  }
+}
+
+@keyframes auto-type {
+  25% {
+    transform: translateY(6px);
+  }
+  50% {
+    transform: translateY(-6px);
   }
 }
