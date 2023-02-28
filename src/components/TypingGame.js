@@ -16,7 +16,6 @@ function TypingGame() {
   const [words, setWords] = useState([]);
   const [typedQuote, setTypedQuote] = useState("");
   let [currentQuote, setCurrentQuote] = useState("");
-  const [startTime, setStartTime] = useState(Date.now());
   const [isWin, setIsWin] = useState(false);
   const [isWrongCharacter, setIsWrongCharacter] = useState(false);
 
@@ -26,10 +25,10 @@ function TypingGame() {
     //removes commas and joins the elements
     const quoteChars = quote.split("/,/").join();
     setWords(quoteChars);
-    setStartTime(Date.now() / 1000);
     setIsWin(false);
     setIsWrongCharacter(false);
   }
+
 
   const handleOnInput = (e) => {
     const typedValue = e.target.value;

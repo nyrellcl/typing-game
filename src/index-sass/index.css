@@ -196,7 +196,7 @@ h1 {
   .typing-section .exit-btn:hover {
     transform: translateY(-0.4375rem);
   }
-  .typing-section__area .user-area .generate-btn:hover {
+  .typing-section__area .generate-btn:hover {
     transform: translateY(0.4375rem);
   }
 }
