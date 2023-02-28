@@ -88,16 +88,6 @@ h1 {
 .typing-section {
   position: relative;
   background-color: #6e85b7;
-  h1 {
-    position: absolute;
-    text-align: center;
-    top: 15%;
-    right: 0;
-    left: 0;
-    width: 90%;
-    margin: 0 auto;
-    color: #f8f9d7;
-  }
   .exit-btn {
     @extend %btns;
     background-color: #fcf1f1;
@@ -116,6 +106,12 @@ h1 {
     height: 100vh;
     justify-content: center;
     gap: 2rem;
+    h1 {
+      text-align: center;
+      width: 90%;
+      margin: 0 auto;
+      color: #f8f9d7;
+    }
     .generate-btn {
       background-color: #f7ccac;
       width: 10rem;
@@ -180,12 +176,12 @@ h1 {
 
   .typing-section {
     &__area {
-        &__quote {
-            p {
-              width: 90%;
-              margin: 0 auto;
-            }
-          }
+      &__quote {
+        p {
+          width: 90%;
+          margin: 0 auto;
+        }
+      }
       .user-area {
         input {
           width: 50%;

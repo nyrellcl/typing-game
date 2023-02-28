@@ -56,9 +56,8 @@ function TypingGame() {
           Exit game
         </button>
       </Link>
-      <h1>Practice your typing</h1>
-     
       <article className="typing-section__area">
+      <h1>Practice your typing</h1>
       <button type="button" className="generate-btn" onClick={getQuote}>
         Generate quote
       </button>
