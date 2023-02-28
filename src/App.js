@@ -8,8 +8,8 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/typing-game/start-page" element={<StartPage />} />
-        <Route path="/typing-game" element={<TypingGame />} />
+        <Route path="/typing-game" element={<StartPage />} />
+        <Route path="/game" element={<TypingGame />} />
       </Routes>
     </>
   );

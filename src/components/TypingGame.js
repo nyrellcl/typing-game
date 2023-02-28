@@ -48,7 +48,7 @@ function TypingGame() {
 
   return (
     <section className="typing-section">
-        <Link to="/typing-game/start-page"><button type="button">Exit game</button></Link>
+        <Link to="/typing-game"><button type="button">Exit game</button></Link>
       <h1>Practice your typing</h1>
       <article className="typing-section__area">
         <div className="typing-section__area__quote">
