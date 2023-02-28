@@ -13,7 +13,7 @@ function StartPage() {
       <h1>Typing Game</h1>
       <article className="start-section__content">
         <p>Click start and test out your typing skills!</p>
-        <Link to="/game">
+        <Link to="/typing-game/game">
           <button type="button" className="start-btn">Start game</button>
         </Link>
       </article>
