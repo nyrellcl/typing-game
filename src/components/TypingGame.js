@@ -52,11 +52,11 @@ function TypingGame() {
         <Link to="/typing-game"><button type="button" className="exit-btn">Exit game</button></Link>
       <h1>Practice your typing</h1>
       <article className="typing-section__area">
+      {isWrongCharacter ? <p className="wrong-character">Oops! Wrong character. Try Again!</p> : null}
         <div className="typing-section__area__quote">
           {isWin ? <p>Nice Job! Let's keep practicing. Get another quote!</p> : <p>{words}</p>}
         </div>
         <fieldset className="user-area">
-        {isWrongCharacter ? <p className="wrong-character">Oops! Wrong character. Try Again!</p> : null}
           <input
             onChange={handleOnInput}
             type="text"
