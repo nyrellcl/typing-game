@@ -1,4 +1,9 @@
-@import "../Global-sass/function";
+@import "../Global-sass/function", "../Global-sass/colors",
+  "../Global-sass/placeholders";
+
+#root {
+  font-family: "Ubuntu", sans-serif;
+}
 
 * {
   padding: 0;
@@ -10,15 +15,59 @@ body {
   min-width: rem(375);
 }
 
-.typing-section {
-    position: relative;
-    h1{
-        position: absolute;
-        text-align: center;
-        top: 20%;
-        right: 0;
-        left: 0;
+.start-section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $bg;
+  h1 {
+    @extend %retro-letters;
+    font-family: "Bitter";
+    color: #f8f9d7;
+  }
+  &__content {
+    width: 90%;
+    margin: 0 auto;
+    font-size: rem(24);
+    text-align: center;
+    p{
+        line-height: 2.5rem;
     }
+    .start-btn{
+        background-color: #6E85B7;
+        border: none;
+        width: rem(120);
+        height: rem(40);
+        border-radius: rem(8);
+        margin-top: 2rem;
+        text-transform: uppercase;
+        color: #f8f9d7;
+        font-weight: 700;
+        letter-spacing: rem(1);
+        box-shadow: 0 rem(8) rem(15) rgba(0,0,0,0.1);
+        cursor: pointer;
+        transition: all 0.3s ease 0s;
+        &:hover{
+            background-color:#f8f9d7;
+            color: #6E85B7;
+            box-shadow: 0 rem(15) rem(20) rgba(46,229,157,0.4);
+            transform: translateY(rem(-7));
+        }
+    }
+  }
+}
+
+.typing-section {
+  position: relative;
+  h1 {
+    position: absolute;
+    text-align: center;
+    top: 20%;
+    right: 0;
+    left: 0;
+  }
   &__area {
     display: flex;
     flex-direction: column;

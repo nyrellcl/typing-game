@@ -5,10 +5,10 @@ function StartPage() {
   return (
     <section className="start-section">
       <h1>Typing Game</h1>
-      <article>
-        <p>Click start to play the game and test your typing skills!</p>
+      <article className="start-section__content">
+        <p>Click start and test out your typing skills!</p>
         <Link to="/typing-game">
-          <button type="button">Play game</button>
+          <button type="button" className="start-btn">Play game</button>
         </Link>
       </article>
     </section>

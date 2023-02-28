@@ -1,3 +1,16 @@
+.start-section h1 {
+  font-size: 2.625rem;
+  font-weight: 700;
+  text-shadow: 0.3125rem 0.3125rem 0rem #000000;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 2rem;
+}
+
+#root {
+  font-family: "Ubuntu", sans-serif;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -6,6 +19,49 @@
 
 body {
   min-width: 23.4375rem;
+}
+
+.start-section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #C4D7E0;
+}
+.start-section h1 {
+  font-family: "Bitter";
+  color: #f8f9d7;
+}
+.start-section__content {
+  width: 90%;
+  margin: 0 auto;
+  font-size: 1.5rem;
+  text-align: center;
+}
+.start-section__content p {
+  line-height: 2.5rem;
+}
+.start-section__content .start-btn {
+  background-color: #6E85B7;
+  border: none;
+  width: 7.5rem;
+  height: 2.5rem;
+  border-radius: 0.5rem;
+  margin-top: 2rem;
+  text-transform: uppercase;
+  color: #f8f9d7;
+  font-weight: 700;
+  letter-spacing: 0.0625rem;
+  box-shadow: 0 0.5rem 0.9375rem rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+.start-section__content .start-btn:hover {
+  background-color: #f8f9d7;
+  color: #6E85B7;
+  box-shadow: 0 0.9375rem 1.25rem rgba(46, 229, 157, 0.4);
+  transform: translateY(-0.4375rem);
 }
 
 .typing-section {
