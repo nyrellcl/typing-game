@@ -158,7 +158,6 @@ h1 {
   height: 3.75rem;
   border-radius: 0.5rem;
   border: 0.0625rem solid #f8f9d7;
-  outline: 0.0625rem solid #262727;
 }
 .typing-section__area .user-area .wrong-character {
   text-align: center;
