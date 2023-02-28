@@ -127,6 +127,10 @@ h1 {
       padding: 1rem;
       font-size: rem(18);
       margin: 1rem auto;
+      position: absolute;
+      right: 0;
+      left: 0;
+      top: 80px;
     }
     &__quote {
       display: flex;
@@ -146,6 +150,7 @@ h1 {
       border: none;
       flex-direction: column;
       width: 100%;
+      position: relative;
       input {
         width: 85%;
         margin: 0 auto;

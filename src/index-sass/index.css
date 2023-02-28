@@ -143,6 +143,10 @@ h1 {
   padding: 1rem;
   font-size: 1.125rem;
   margin: 1rem auto;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 80px;
 }
 .typing-section__area__quote {
   display: flex;
@@ -162,6 +166,7 @@ h1 {
   border: none;
   flex-direction: column;
   width: 100%;
+  position: relative;
 }
 .typing-section__area .user-area input {
   width: 85%;
