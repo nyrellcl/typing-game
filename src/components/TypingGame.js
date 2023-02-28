@@ -14,14 +14,14 @@ function TypingGame() {
 
   const [words, setWords] = useState([]);
   const [typedQuote, setTypedQuote] = useState("");
-  const [setCurrentQuote] = useState("");
+  let [currentQuote, setCurrentQuote] = useState("");
   const [startTime, setStartTime] = useState(Date.now());
-  const [isWin, setIsWin] = useState(false);
+  const [isWin, setIsWin] = useState(false)
 
   function getQuote() {
     const quoteIndex = Math.floor(Math.random() * quotes.length);
     const quote = quotes[quoteIndex];
-    const quoteChars = quote.split("");
+    const quoteChars = quote.split("")
     setWords(quoteChars);
     setStartTime(Date.now() / 1000);
     setIsWin(false);
@@ -30,18 +30,18 @@ function TypingGame() {
   const handleOnInput = (e) => {
     const typedValue = e.target.value;
     setTypedQuote(typedValue);
-    const currentQuote = words[0];
+    currentQuote = words[0];
     if (typedValue === currentQuote) {
       setCurrentQuote(currentQuote);
       //deletes the characters of each word in quote
       setWords(words.slice(1));
       setTypedQuote("");
-      if (words.length === 1) {
-        setIsWin(true);
-      }
+      if(words.length === 1){
+          setIsWin(true)
+      } 
     }
-    if (typedValue !== currentQuote) {
-      console.log("oops wrong letter");
+    if(typedValue !== currentQuote){
+        console.log("oops wrong letter")
     }
   };
 
@@ -51,7 +51,7 @@ function TypingGame() {
       <article className="typing-section__area">
         <p>{startTime}</p>
         <div className="typing-section__area__quote">
-          {isWin ? <p>Nice Job! Lets keep Practicing!</p> : <p>{words}</p>}
+        {isWin ? <p>Nice Job! Lets keep Practicing!</p> : <p>{words}</p>}
         </div>
         <fieldset className="user-area">
           <input
