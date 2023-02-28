@@ -18,6 +18,7 @@ function TypingGame() {
   let [currentQuote, setCurrentQuote] = useState("");
   const [startTime, setStartTime] = useState(Date.now());
   const [isWin, setIsWin] = useState(false);
+  const [isWrongCharacter, setIsWrongCharacter] = useState(false)
 
   function getQuote() {
     const quoteIndex = Math.floor(Math.random() * quotes.length);
@@ -26,6 +27,7 @@ function TypingGame() {
     setWords(quoteChars);
     setStartTime(Date.now() / 1000);
     setIsWin(false);
+    setIsWrongCharacter(false)
   }
 
   const handleOnInput = (e) => {
@@ -41,9 +43,7 @@ function TypingGame() {
         setIsWin(true);
       }
     }
-    if (typedValue !== currentQuote) {
-      console.log("oops wrong letter");
-    }
+    (typedValue !== currentQuote ? setIsWrongCharacter(true) : setIsWrongCharacter(false))
   };
 
   return (
@@ -51,7 +51,6 @@ function TypingGame() {
         <Link to="/start-page"><button type="button">Exit game</button></Link>
       <h1>Practice your typing</h1>
       <article className="typing-section__area">
-        <p>{startTime}</p>
         <div className="typing-section__area__quote">
           {isWin ? <p>Nice Job! Lets keep Practicing!</p> : <p>{words}</p>}
         </div>
@@ -63,6 +62,7 @@ function TypingGame() {
             aria-label="current word"
             id="typed-value"
           />
+          {isWrongCharacter ? <p>Oops! Wrong letter</p> : null}
           <button type="button" onClick={getQuote}>
             Generate quote
           </button>
