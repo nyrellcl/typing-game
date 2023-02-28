@@ -1,8 +1,18 @@
 %retro-letters{
-    font-size: rem(42);
     font-weight: 700;
     text-shadow: rem(5) rem(5) rem(0) #000000;
     text-transform: uppercase;
     text-align: center;
     margin: 2rem;
+}
+
+%btns{
+    font-weight: 700;
+    border-radius: 0.5rem;
+    text-transform: uppercase;
+    margin: 0 auto;
+    border: none;
+    cursor: pointer;
+    letter-spacing: 0.0625rem;
+    box-shadow: 0 0.5rem 0.9375rem rgb(0 0 0 / 10%);
 }

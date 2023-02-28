@@ -23,7 +23,8 @@ function TypingGame() {
   function getQuote() {
     const quoteIndex = Math.floor(Math.random() * quotes.length);
     const quote = quotes[quoteIndex];
-    const quoteChars = quote.split("");
+    //removes commas and joins the elements
+    const quoteChars = quote.split("/,/").join();
     setWords(quoteChars);
     setStartTime(Date.now() / 1000);
     setIsWin(false);
@@ -48,22 +49,21 @@ function TypingGame() {
 
   return (
     <section className="typing-section">
-        <Link to="/typing-game"><button type="button">Exit game</button></Link>
+        <Link to="/typing-game"><button type="button" className="exit-btn">Exit game</button></Link>
       <h1>Practice your typing</h1>
       <article className="typing-section__area">
         <div className="typing-section__area__quote">
-          {isWin ? <p>Nice Job! Let's keep practicing!</p> : <p>{words}</p>}
+          {isWin ? <p>Nice Job! Let's keep practicing. Get another quote!</p> : <p>{words}</p>}
         </div>
         <fieldset className="user-area">
           <input
             onChange={handleOnInput}
             type="text"
             value={typedQuote}
-            aria-label="current word"
-            id="typed-value"
+            placeholder={words}
           />
-          {isWrongCharacter ? <p>Oops! Wrong letter</p> : null}
-          <button type="button" onClick={getQuote}>
+          {isWrongCharacter ? <p className="wrong-character">Oops! Wrong character. Try Again!</p> : null}
+          <button type="button" className="generate-btn" onClick={getQuote}>
             Generate quote
           </button>
         </fieldset>
