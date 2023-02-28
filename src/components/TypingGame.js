@@ -10,7 +10,7 @@ function TypingGame() {
     "I never make exceptions. An exception disproves the rule.",
     "What one man can invent another can discover.",
     "Nothing clears up a case so much as stating it to another person.",
-    "Education never ends, Watson. It is a series of lessons, with the greatest for the last."
+    "Education never ends, Watson. It is a series of lessons, with the greatest for the last.",
   ]);
 
   const [words, setWords] = useState([]);
@@ -18,7 +18,7 @@ function TypingGame() {
   let [currentQuote, setCurrentQuote] = useState("");
   const [startTime, setStartTime] = useState(Date.now());
   const [isWin, setIsWin] = useState(false);
-  const [isWrongCharacter, setIsWrongCharacter] = useState(false)
+  const [isWrongCharacter, setIsWrongCharacter] = useState(false);
 
   function getQuote() {
     const quoteIndex = Math.floor(Math.random() * quotes.length);
@@ -28,7 +28,7 @@ function TypingGame() {
     setWords(quoteChars);
     setStartTime(Date.now() / 1000);
     setIsWin(false);
-    setIsWrongCharacter(false)
+    setIsWrongCharacter(false);
   }
 
   const handleOnInput = (e) => {
@@ -44,17 +44,30 @@ function TypingGame() {
         setIsWin(true);
       }
     }
-    (typedValue !== currentQuote ? setIsWrongCharacter(true) : setIsWrongCharacter(false))
+    typedValue !== currentQuote
+      ? setIsWrongCharacter(true)
+      : setIsWrongCharacter(false);
   };
 
   return (
     <section className="typing-section">
-        <Link to="/typing-game"><button type="button" className="exit-btn">Exit game</button></Link>
+      <Link to="/typing-game">
+        <button type="button" className="exit-btn">
+          Exit game
+        </button>
+      </Link>
       <h1>Practice your typing</h1>
+     
       <article className="typing-section__area">
-      {isWrongCharacter ? <p className="wrong-character">Oops! Wrong character. Try Again!</p> : null}
+      <button type="button" className="generate-btn" onClick={getQuote}>
+        Generate quote
+      </button>
         <div className="typing-section__area__quote">
-          {isWin ? <p>Nice Job! Let's keep practicing. Get another quote!</p> : <p>{words}</p>}
+          {isWin ? (
+            <p>Nice Job! Let's keep practicing. Get another quote!</p>
+          ) : (
+            <p>{words}</p>
+          )}
         </div>
         <fieldset className="user-area">
           <input
@@ -63,9 +76,9 @@ function TypingGame() {
             value={typedQuote}
             placeholder={words}
           />
-          <button type="button" className="generate-btn" onClick={getQuote}>
-            Generate quote
-          </button>
+          {isWrongCharacter ? (
+            <p className="wrong-character">Oops! Wrong character. Try Again!</p>
+          ) : null}
         </fieldset>
       </article>
     </section>

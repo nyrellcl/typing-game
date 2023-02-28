@@ -91,7 +91,7 @@ h1 {
   h1 {
     position: absolute;
     text-align: center;
-    top: 20%;
+    top: 15%;
     right: 0;
     left: 0;
     width: 90%;
@@ -116,15 +116,22 @@ h1 {
     height: 100vh;
     justify-content: center;
     gap: 2rem;
+    .generate-btn {
+      background-color: #f7ccac;
+      width: 10rem;
+      height: 3rem;
+      @extend %btns;
+      transition: all 0.3s ease 0s;
+    }
     .wrong-character {
-        text-align: center;
-        color: #f8f9d7;
-        border: 2px solid #f8f9d7;
-        width: rem(330);
-        padding: 1rem;
-        font-size: rem(18);
-        margin: 1rem auto;
-      }
+      text-align: center;
+      color: #f8f9d7;
+      border: 2px solid #f8f9d7;
+      width: rem(330);
+      padding: 1rem;
+      font-size: rem(18);
+      margin: 1rem auto;
+    }
     &__quote {
       display: flex;
       align-items: center;
@@ -150,21 +157,14 @@ h1 {
         border-radius: rem(8);
         border: rem(1) solid #f8f9d7;
       }
-      .generate-btn {
-        background-color: #f7ccac;
-        width: 10rem;
-        height: 3rem;
-        @extend %btns;
-        transition: all 0.3s ease 0s;
-      }
     }
   }
 }
 
 @media only screen and (min-width: 1200px) {
-    h1{
-        font-size: rem(54);
-    }
+  h1 {
+    font-size: rem(54);
+  }
   .start-section {
     &__content {
       .start-btn {
@@ -179,16 +179,19 @@ h1 {
   }
 
   .typing-section {
-      &__area{
-          .user-area{
-              &__quote{
-                min-width: 75%;
-              }
-              input{
-                  width: 50%
-              }
+    &__area {
+        &__quote {
+            p {
+              width: 90%;
+              margin: 0 auto;
+            }
           }
+      .user-area {
+        input {
+          width: 50%;
+        }
       }
+    }
     .exit-btn {
       &:hover {
         transform: translateY(rem(-7));
