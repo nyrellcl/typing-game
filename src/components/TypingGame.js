@@ -52,7 +52,7 @@ function TypingGame() {
       <h1>Practice your typing</h1>
       <article className="typing-section__area">
         <div className="typing-section__area__quote">
-          {isWin ? <p>Nice Job! Lets keep Practicing!</p> : <p>{words}</p>}
+          {isWin ? <p>Nice Job! Let's keep practicing!</p> : <p>{words}</p>}
         </div>
         <fieldset className="user-area">
           <input
