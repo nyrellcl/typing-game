@@ -14,7 +14,7 @@ function StartPage() {
       <article className="start-section__content">
         <p>Click start and test out your typing skills!</p>
         <Link to="/game">
-          <button type="button" className="start-btn">Play game</button>
+          <button type="button" className="start-btn">Start game</button>
         </Link>
       </article>
     </section>
