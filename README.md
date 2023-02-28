@@ -1,70 +1,30 @@
-# Getting Started with Create React App
+# Typing Game
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![](./typing-game.png)
 
-## Available Scripts
+# OverView
 
-In the project directory, you can run:
+Welcome to my Typing Game! I got this idea from going through Microsoft's Web Developer For Beginners repo on their github[https://github.com/microsoft/Web-Dev-For-Beginners]. Their repo features a 12 week long FREE course on starting out as a web developer, that includes in depth assignments, courses, and projects! Among those projects was the Typing game. I thought this would be great practice for me to independently create. I decided to look over the solution and see how I would go about creating the application. My tech stack for this project were: SCSS/SASS and ReactJS. The project solution, however, was writting in Vanilla JavaScript. To challenge myself, I wanted to refine my skills in React and build out an entire application, just from referencing the Vanilla Javascript. Ultimately, the process proved to be a satisfying feat. I was able to improve my design process and focus on the logic that will be imperative, rather than focusing on every single thing at once. I also had more practice with useState(). This project really helped me organize my thought hierarchy and go step by step towards completing this application.
 
-### `npm start`
+# How To Play
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- The user will be presented with a Start Page where they are able to navigate to the Game Page via the "Start Game" button. 
+- The user will be presented with an input box and generate quote button, they can click the generate quote button, and a quote prompt will appear
+- Once they've generated the quote, they can click on the input box where it will also have the prompt displayed as a palceholder in the input box
+- As the user types the correct characters, each character will be taken away, if the user typs the incorrect character, said character will display in the input box and a message box will appear notifying the user that they've typed the wrong character for the quote
+- Once the user deletes the incorrect character and proceeds to type the correct character until finished, a message will appear congratulating the user and prompting them to generate another quote for practice. 
+- User can exit out of the game by clicking the Exit game Button and will be brought back to the start page
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Edge Cases/User stories
+- user presses enter => generate quote
+- if user types a special character or number ? error 
+- if displayed prompt has quotation marks inside of it ? 
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Tech Stack
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- HTML
+- CSS
+- SCSS/SASS [https://sass-lang.com/documentation/]
+- ReactJS [https://reactjs.org/]
+- JavaScript [https://www.javascript.com/]
