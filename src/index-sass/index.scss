@@ -137,11 +137,15 @@ h1 {
       align-items: center;
       gap: 0.25rem;
       flex-wrap: wrap;
-      p {
-        padding: 0 2rem;
-        line-height: rem(28);
-        font-size: rem(18);
-        color: #f8f9d7;
+      letter-spacing: rem(1);
+      font-size: rem(18);
+      color: #f8f9d7;
+      line-height: rem(28);
+      &__message{
+          text-align: center;
+      }
+      &__actual-quote {
+        font-family: "Cutive", serif;
       }
     }
     .user-area {

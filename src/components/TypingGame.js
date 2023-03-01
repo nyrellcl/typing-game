@@ -62,9 +62,9 @@ function TypingGame() {
       </button>
         <div className="typing-section__area__quote">
           {isWin ? (
-            <p>Nice Job! Let's keep practicing. Get another quote!</p>
+            <p className="typing-section__area__quote__message">Nice Job! Let's keep practicing. Get another quote!</p>
           ) : (
-            <p>{words}</p>
+            <p className="typing-section__area__quote__actual-quote">{words}</p>
           )}
         </div>
         <fieldset className="user-area">

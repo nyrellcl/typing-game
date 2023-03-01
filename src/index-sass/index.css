@@ -153,12 +153,16 @@ h1 {
   align-items: center;
   gap: 0.25rem;
   flex-wrap: wrap;
-}
-.typing-section__area__quote p {
-  padding: 0 2rem;
-  line-height: 1.75rem;
+  letter-spacing: 0.0625rem;
   font-size: 1.125rem;
   color: #f8f9d7;
+  line-height: 1.75rem;
+}
+.typing-section__area__quote__message {
+  text-align: center;
+}
+.typing-section__area__quote__actual-quote {
+  font-family: "Cutive", serif;
 }
 .typing-section__area .user-area {
   display: flex;
