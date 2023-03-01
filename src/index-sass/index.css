@@ -157,6 +157,8 @@ h1 {
   font-size: 1.125rem;
   color: #f8f9d7;
   line-height: 1.75rem;
+  width: 90%;
+  margin: 0 auto;
 }
 .typing-section__area__quote__message {
   text-align: center;

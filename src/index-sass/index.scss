@@ -141,8 +141,10 @@ h1 {
       font-size: rem(18);
       color: #f8f9d7;
       line-height: rem(28);
-      &__message{
-          text-align: center;
+      width: 90%;
+      margin: 0 auto;
+      &__message {
+        text-align: center;
       }
       &__actual-quote {
         font-family: "Cutive", serif;
