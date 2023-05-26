@@ -160,6 +160,9 @@ h1 {
   width: 90%;
   margin: 0 auto;
 }
+.typing-section__area__quote p {
+  text-align: center;
+}
 .typing-section__area__quote__message {
   text-align: center;
 }
